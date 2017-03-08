@@ -1,0 +1,23 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+src/Server.Business/obj/*
+src/Server.Business/bin/*
+src/Server.Business.Tests/obj/*
+src/Server.Business.Tests/bin/*
+src/Server.Model/obj/*
+src/Server.Model/bin/*
+src/Server.Repo/obj/*
+src/Server.Repo/bin/*
+src/Web.Api/obj/*
+src/Web.Api/bin/*
+src/Web.Api/Properties/PublishProfiles/*
+src/Web.Api/Web.Live.config
+src/Web.App/obj/*
+src/Web.App/bin/*
+src/Web.App/Properties/PublishProfiles/*
+src/Web.App/node_modules/*
+src/Web.App/Web.Live.config
+src/packages/*
+src/.vs/*
