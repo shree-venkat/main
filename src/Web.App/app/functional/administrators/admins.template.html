@@ -1,0 +1,61 @@
+﻿<legend>
+    Administrators
+    <a class="btn btn-primary btn-xs glyphicon glyphicon-plus" uib-tooltip="Add an Administrator" ng-click="vm.addUser()" style="padding-bottom: 3px"></a>
+</legend>
+<div class="row">
+    <div class="col-xs-6  col-sm-4 col-md-4 col-lg-4">
+        <form class="form-inline">
+            <label for="pageSize">Page Size</label>
+            <div class="form-group" id="pageSize">
+                <page-size />
+            </div>
+        </form>
+    </div>
+    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+        <form class="form-inline pull-right" ng-submit="vm.search(vm.searchTerm)" role="form">
+            <div class="form-group">
+                <input type="text" class="form-control input-sm" ng-model="vm.searchTerm" placeholder="Search Admin..." id="admin-search-input">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-sm" id="admin-search-btn"><strong>Search</strong></button>
+                <button ng-click="vm.search('')" class="btn btn-default btn-sm">Reset</button>
+            </div>
+        </form>
+    </div>
+</div>
+&nbsp;
+<div class="table-responsive">
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Email Address</th>
+                <th>Admin</th>
+                <th class="text-center" style="width: 50px">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="admin in vm.admins">
+                <td>{{admin.DisplayName}}</td>
+                <td>{{admin.EmailAddress}}</td>
+                <td ng-init="isAdmin = vm.isAdmin(admin)">
+                    <i ng-class="{'glyphicon glyphicon-ok glyphicon-green': isAdmin == true, 'glyphicon glyphicon-remove glyphicon-red' : isAdmin == false}"></i>
+                </td>
+                <td class="text-center">
+                    <a type="button" class="btn btn-xs btn-primary glyphicon glyphicon-trash" ng-click="vm.deleteUser(admin)" style="padding-bottom: 2px"></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="row" ng-if="vm.admins.length > 0">
+    <div class="col-sm-6 pull-right">
+        <div class="pull-right text-center-sm">
+            <uib-pagination total-items="vm.total" items-per-page="vm.pageSize" max-size="5" ng-model="vm.page" class="pagination-sm" boundary-links="true" rotate="false" num-pages="vm.totalPages" ng-change="vm.pageChanged(vm.page)"></uib-pagination>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <br />
+        <pagination-info class="text-center-sm"></pagination-info>
+    </div>
+</div>

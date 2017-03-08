@@ -1,0 +1,31 @@
+﻿<section ng-controller="navbarCtrl as vm">
+    <div class="navbar-header visible-xs">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a ui-sref="home" ui-sref-opts="{ reload: true }" class="navbar-brand"><span class="glyphicon glyphicon-home"></span></a>
+    </div>
+    <div class="navbar-collapse collapse">
+
+        <ul class="nav navbar-nav">
+            <li class="hidden-xs"><a ui-sref="home" ui-sref-opts="{ reload: true }" ng-class="currentState === 'home' || currentState === 'home-no-slash' ? 'navbar-highlight' : 'navbar-normal'" style="font-weight: bold">Home</a></li>
+            <li><a ui-sref="profile" ui-sref-opts="{ reload: true }" ng-class="currentState === 'profile' ? 'navbar-highlight' : 'navbar-normal'">CV</a></li>
+            <li><a ui-sref="dropbox" ui-sref-opts="{ reload: true }" ng-class="currentState === 'dropbox' ? 'navbar-highlight' : 'navbar-normal'">Dropbox/GDrive</a></li>
+            <li><a ui-sref="retail" ui-sref-opts="{ reload: true }" ng-class="currentState === 'retail' || currentState === 'product' ? 'navbar-highlight' : 'navbar-normal'">Retail Shopping</a></li>
+            <li><a ui-sref="codepen" ui-sref-opts="{ reload: true }" ng-class="currentState === 'codepen' ? 'navbar-highlight' : 'navbar-normal'">CodePen/JSFiddle</a></li>
+            <!--<li class="dropdown hover" uib-dropdown>
+                <a href="javascript:void(0);" class="dropdown-toggle" uib-dropdown-toggle aria-expanded="false">Retail Demo <span class="caret"></span></a>
+                <ul class="dropdown-menu uib-dropdown-menu" role="menu">
+                    <li><a ui-sref="retail" ui-sref-opts="{ reload: true }">Retail Shopping</a></li>
+                    <li><a ui-sref="dashboard" ui-sref-opts="{ reload: true }">Dashboard</a></li>
+                </ul>
+            </li>-->
+            <li><a href="http://Blog.ShreeVenkat.co.uk" class="navbar-normal">Blog Subdomain</a></li>
+        </ul>
+
+        <span ng-bind-html="vm.loginMenuHtml"></span>
+    </div>
+</section>

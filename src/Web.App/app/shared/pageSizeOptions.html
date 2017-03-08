@@ -1,0 +1,13 @@
+﻿<div class="dropdown" style="display: inline-block">
+    <button class="btn btn-default dropdown-toggle" type="button" id="pageSizeOptions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="margin-left: 0; margin-right: 0">
+        <span ng-if="vm.pageSize !== 999">Show {{vm.pageSize}} Records</span>
+        <span ng-if="vm.pageSize === 999">Show More Records</span>
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="pageSizeOptions">
+        <li><a href="javascript:void(0)" ng-click="vm.pageSize = 10;vm.pageSizeChanged();">Show 10 Records</a></li>
+        <li><a href="javascript:void(0)" ng-click="vm.pageSize = 25;vm.pageSizeChanged();">Show 25 Records</a></li>
+        <li><a href="javascript:void(0)" ng-click="vm.pageSize = 50;vm.pageSizeChanged();">Show 50 Records</a></li>
+        <li><a href="javascript:void(0)" ng-click="vm.pageSize = 999;vm.pageSizeChanged();">Show More Records</a></li>
+    </ul>
+</div>

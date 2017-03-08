@@ -1,0 +1,79 @@
+﻿<section>
+    <div class="hidden-xs">
+        <div class="pull-left">
+            <button class="btn btn-success btn-md" ng-click="vm.init()">
+                Demo &nbsp; <span class="glyphicon glyphicon-import"></span>
+            </button>
+            <button class="btn btn-warning btn-md reset" ng-click="vm.clear()">
+                Reset &nbsp; <span class="glyphicon glyphicon-remove"></span>
+            </button>
+            <button class="btn btn-info btn-md" ng-click="vm.run()">
+                Run Fiddle &nbsp; <span class="glyphicon glyphicon-play"></span>
+            </button>
+            <button class="btn btn-default btn-md" ng-click="vm.clearOutput()" ng-if="vm.outputHtml !== ''">
+                Clear Output &nbsp; <span class="glyphicon glyphicon-remove"></span>
+            </button>
+        </div>
+        <div class="pull-right">
+            <button class="btn btn-primary btn-md" ng-click="vm.openJsConsole()"> <!-- uib-tooltip="Test Your Javascript Skills" -->
+                JS Console &nbsp; <span class="glyphicon glyphicon-new-window"></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div class="visible-xs">
+        <div>
+            <button class="btn btn-success btn-md col-xs-5" ng-click="vm.init()">
+                Demo &nbsp; <span class="glyphicon glyphicon-import"></span>
+            </button>
+            <button class="btn btn-warning btn-md reset col-xs-6" ng-click="vm.clear()">
+                Reset &nbsp; <span class="glyphicon glyphicon-remove"></span>
+            </button>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js"></script>
+
+    <div class="row" style="padding-top: 10px;">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 input-box">
+            <div class="background">HTML</div>
+            <textarea ng-model="vm.html" />
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 input-box">
+            <div class="background">LESS / CSS</div>
+            <textarea ng-model="vm.less" />
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 input-box">
+            <div class="background">JAVASCRIPT</div>
+            <textarea ng-model="vm.js" />
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="visible-xs">
+            <div style="padding-top: 10px">
+                <button class="btn btn-info btn-md col-xs-5" ng-click="vm.run()">
+                    Run Fiddle &nbsp; <span class="glyphicon glyphicon-play"></span>
+                </button>
+                <button class="btn btn-primary btn-md col-xs-6" ng-click="vm.openJsConsole()">
+                    JS Console &nbsp; <span class="glyphicon glyphicon-new-window"></span>
+                </button>
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 output-box">
+                    <style type="text/css">{{vm.outputStyle}}</style>
+                    <div ng-bind-html="vm.outputHtml"></div>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+                    <div ng-bind-html="vm.outputScript"></div>
+        </div>
+    </div>
+</section>

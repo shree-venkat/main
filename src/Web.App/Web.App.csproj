@@ -1,0 +1,604 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2460E5AE-CB42-4FDE-84C0-C422AEB1C442}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Web.App</RootNamespace>
+    <AssemblyName>Web.App</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;RELEASE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\app-bundle.min.js" />
+    <Content Include="app\app.module.js" />
+    <Content Include="app\app.config.js" />
+    <Content Include="app\app.routes.js" />
+    <Content Include="app\common\errorhandler\errorhandler.interceptor.js" />
+    <Content Include="app\common\errorhandler\errorhandler.module.js" />
+    <Content Include="app\common\logger\logger.factory.js" />
+    <Content Include="app\common\logger\logger.module.js" />
+    <Content Include="app\common\router\router.module.js" />
+    <Content Include="app\common\router\router.events.js" />
+    <Content Include="app\common\router\router.factory.js" />
+    <Content Include="app\common\router\router.providers.js" />
+    <Content Include="app\functional\retail\productDetails.template.html" />
+    <Content Include="app\functional\retail\productDetails.component.js" />
+    <Content Include="app\functional\retail\productList.component.js" />
+    <Content Include="app\functional\retail\productList.template.html" />
+    <Content Include="app\functional\retail\retail.module.js" />
+    <Content Include="app\functional\retail\retail.routes.js" />
+    <Content Include="app\functional\dropbox\dropbox.component.js" />
+    <Content Include="app\functional\dropbox\dropbox.template.html" />
+    <Content Include="app\functional\dropbox\dropbox.module.js" />
+    <Content Include="app\functional\dropbox\dropbox.routes.js" />
+    <Content Include="app\functional\codepen\jsconsole.modal.html" />
+    <Content Include="app\functional\codepen\jsconsole.controller.js" />
+    <Content Include="app\functional\codepen\codepen.component.js" />
+    <Content Include="app\functional\codepen\codepen.template.html" />
+    <Content Include="app\functional\administrators\admins.component.js" />
+    <Content Include="app\functional\administrators\admins.template.html" />
+    <Content Include="app\functional\administrators\admins.module.js" />
+    <Content Include="app\functional\administrators\admins.routes.js" />
+    <Content Include="app\functional\administrators\createAdmin.controller.js" />
+    <Content Include="app\functional\administrators\createAdminModal.html" />
+    <Content Include="app\functional\home\banner-home.html" />
+    <Content Include="app\functional\profile\profile.module.js" />
+    <Content Include="app\functional\profile\profile.routes.js" />
+    <Content Include="app\functional\profile\profile.template.html" />
+    <Content Include="app\functional\home\home.module.js" />
+    <Content Include="app\functional\profile\profile.component.js" />
+    <Content Include="app\functional\home\home.component.js" />
+    <Content Include="app\functional\static-pages\error.html" />
+    <Content Include="app\functional\codepen\codepen.module.js" />
+    <Content Include="app\functional\codepen\codepen.routes.js" />
+    <Content Include="app\functional\home\home.template.html" />
+    <Content Include="app\layout\banner.html" />
+    <Content Include="app\layout\spinner.html" />
+    <Content Include="app\layout\navbar.html" />
+    <Content Include="app\layout\navbar.controller.js" />
+    <Content Include="app\resources\error.resource.js" />
+    <Content Include="app\resources\home.resource.js" />
+    <Content Include="app\resources\retail.resource.js" />
+    <Content Include="app\resources\profile.resource.js" />
+    <Content Include="app\resources\services.module.js" />
+    <Content Include="app\resources\dropbox.resource.js" />
+    <Content Include="app\resources\user.resource.js" />
+    <Content Include="app\shared\checkmark.filter..js" />
+    <Content Include="app\shared\confirm.controller.js" />
+    <Content Include="app\shared\confirmModal.html" />
+    <Content Include="app\shared\date.controller.js" />
+    <Content Include="app\shared\formattedSize.filter.js" />
+    <Content Include="app\shared\ngEnterKey.js" />
+    <Content Include="app\shared\pageSizeOptions.html" />
+    <Content Include="app\shared\pageSizeOptions.js" />
+    <Content Include="app\shared\currentPage.html" />
+    <Content Include="app\shared\currentPage.js" />
+    <Content Include="Content\bundles\third-party-libs.min.css" />
+    <Content Include="Content\bundles\third-party-libs.min.js" />
+    <Content Include="Content\images\email-banner.png" />
+    <Content Include="Content\images\email-envelope.png" />
+    <Content Include="Content\images\gif-load.gif" />
+    <Content Include="Content\css\site.css">
+      <DependentUpon>site.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\site.min.css">
+      <DependentUpon>site.css</DependentUpon>
+    </Content>
+    <Content Include="Content\images\phones\dell-streak-7.0.jpg" />
+    <Content Include="Content\images\phones\dell-streak-7.1.jpg" />
+    <Content Include="Content\images\phones\dell-streak-7.2.jpg" />
+    <Content Include="Content\images\phones\dell-streak-7.3.jpg" />
+    <Content Include="Content\images\phones\dell-streak-7.4.jpg" />
+    <Content Include="Content\images\phones\dell-venue.0.jpg" />
+    <Content Include="Content\images\phones\dell-venue.1.jpg" />
+    <Content Include="Content\images\phones\dell-venue.2.jpg" />
+    <Content Include="Content\images\phones\dell-venue.3.jpg" />
+    <Content Include="Content\images\phones\dell-venue.4.jpg" />
+    <Content Include="Content\images\phones\dell-venue.5.jpg" />
+    <Content Include="Content\images\phones\droid-2-global-by-motorola.0.jpg" />
+    <Content Include="Content\images\phones\droid-2-global-by-motorola.1.jpg" />
+    <Content Include="Content\images\phones\droid-2-global-by-motorola.2.jpg" />
+    <Content Include="Content\images\phones\droid-pro-by-motorola.0.jpg" />
+    <Content Include="Content\images\phones\droid-pro-by-motorola.1.jpg" />
+    <Content Include="Content\images\phones\lg-axis.0.jpg" />
+    <Content Include="Content\images\phones\lg-axis.1.jpg" />
+    <Content Include="Content\images\phones\lg-axis.2.jpg" />
+    <Content Include="Content\images\phones\motorola-atrix-4g.0.jpg" />
+    <Content Include="Content\images\phones\motorola-atrix-4g.1.jpg" />
+    <Content Include="Content\images\phones\motorola-atrix-4g.2.jpg" />
+    <Content Include="Content\images\phones\motorola-atrix-4g.3.jpg" />
+    <Content Include="Content\images\phones\motorola-bravo-with-motoblur.0.jpg" />
+    <Content Include="Content\images\phones\motorola-bravo-with-motoblur.1.jpg" />
+    <Content Include="Content\images\phones\motorola-bravo-with-motoblur.2.jpg" />
+    <Content Include="Content\images\phones\motorola-charm-with-motoblur.0.jpg" />
+    <Content Include="Content\images\phones\motorola-charm-with-motoblur.1.jpg" />
+    <Content Include="Content\images\phones\motorola-charm-with-motoblur.2.jpg" />
+    <Content Include="Content\images\phones\motorola-defy-with-motoblur.0.jpg" />
+    <Content Include="Content\images\phones\motorola-defy-with-motoblur.1.jpg" />
+    <Content Include="Content\images\phones\motorola-defy-with-motoblur.2.jpg" />
+    <Content Include="Content\images\phones\motorola-xoom-with-wi-fi.0.jpg" />
+    <Content Include="Content\images\phones\motorola-xoom-with-wi-fi.1.jpg" />
+    <Content Include="Content\images\phones\motorola-xoom-with-wi-fi.2.jpg" />
+    <Content Include="Content\images\phones\motorola-xoom-with-wi-fi.3.jpg" />
+    <Content Include="Content\images\phones\motorola-xoom-with-wi-fi.4.jpg" />
+    <Content Include="Content\images\phones\motorola-xoom-with-wi-fi.5.jpg" />
+    <Content Include="Content\images\phones\motorola-xoom.0.jpg" />
+    <Content Include="Content\images\phones\motorola-xoom.1.jpg" />
+    <Content Include="Content\images\phones\motorola-xoom.2.jpg" />
+    <Content Include="Content\images\phones\nexus-s.0.jpg" />
+    <Content Include="Content\images\phones\nexus-s.1.jpg" />
+    <Content Include="Content\images\phones\nexus-s.2.jpg" />
+    <Content Include="Content\images\phones\nexus-s.3.jpg" />
+    <Content Include="Content\images\phones\samsung-galaxy-tab.0.jpg" />
+    <Content Include="Content\images\phones\samsung-galaxy-tab.1.jpg" />
+    <Content Include="Content\images\phones\samsung-galaxy-tab.2.jpg" />
+    <Content Include="Content\images\phones\samsung-galaxy-tab.3.jpg" />
+    <Content Include="Content\images\phones\samsung-galaxy-tab.4.jpg" />
+    <Content Include="Content\images\phones\samsung-galaxy-tab.5.jpg" />
+    <Content Include="Content\images\phones\samsung-galaxy-tab.6.jpg" />
+    <Content Include="Content\images\phones\samsung-gem.0.jpg" />
+    <Content Include="Content\images\phones\samsung-gem.1.jpg" />
+    <Content Include="Content\images\phones\samsung-gem.2.jpg" />
+    <Content Include="Content\images\phones\samsung-mesmerize-a-galaxy-s-phone.0.jpg" />
+    <Content Include="Content\images\phones\samsung-mesmerize-a-galaxy-s-phone.1.jpg" />
+    <Content Include="Content\images\phones\samsung-mesmerize-a-galaxy-s-phone.2.jpg" />
+    <Content Include="Content\images\phones\samsung-mesmerize-a-galaxy-s-phone.3.jpg" />
+    <Content Include="Content\images\phones\samsung-showcase-a-galaxy-s-phone.0.jpg" />
+    <Content Include="Content\images\phones\samsung-showcase-a-galaxy-s-phone.1.jpg" />
+    <Content Include="Content\images\phones\samsung-showcase-a-galaxy-s-phone.2.jpg" />
+    <Content Include="Content\images\phones\samsung-transform.0.jpg" />
+    <Content Include="Content\images\phones\samsung-transform.1.jpg" />
+    <Content Include="Content\images\phones\samsung-transform.2.jpg" />
+    <Content Include="Content\images\phones\samsung-transform.3.jpg" />
+    <Content Include="Content\images\phones\samsung-transform.4.jpg" />
+    <Content Include="Content\images\phones\sanyo-zio.0.jpg" />
+    <Content Include="Content\images\phones\sanyo-zio.1.jpg" />
+    <Content Include="Content\images\phones\sanyo-zio.2.jpg" />
+    <Content Include="Content\images\phones\t-mobile-g2.0.jpg" />
+    <Content Include="Content\images\phones\t-mobile-g2.1.jpg" />
+    <Content Include="Content\images\phones\t-mobile-g2.2.jpg" />
+    <Content Include="Content\images\phones\t-mobile-mytouch-4g.0.jpg" />
+    <Content Include="Content\images\phones\t-mobile-mytouch-4g.1.jpg" />
+    <Content Include="Content\images\phones\t-mobile-mytouch-4g.2.jpg" />
+    <Content Include="Content\images\phones\t-mobile-mytouch-4g.3.jpg" />
+    <Content Include="Content\images\phones\t-mobile-mytouch-4g.4.jpg" />
+    <Content Include="Content\images\phones\t-mobile-mytouch-4g.5.jpg" />
+    <Content Include="Content\js\site.js" />
+    <Content Include="Content\js\site.min.js">
+      <DependentUpon>site.js</DependentUpon>
+    </Content>
+    <Content Include="Content\packages\angular-animate\angular-animate.js" />
+    <Content Include="Content\packages\angular-animate\index.js" />
+    <Content Include="Content\packages\angular-bootstrap\index.js" />
+    <Content Include="Content\packages\angular-bootstrap\ui-bootstrap-csp.css" />
+    <Content Include="Content\packages\angular-bootstrap\ui-bootstrap-tpls.js" />
+    <Content Include="Content\packages\angular-bootstrap\ui-bootstrap-tpls.min.js" />
+    <Content Include="Content\packages\angular-bootstrap\ui-bootstrap.js" />
+    <Content Include="Content\packages\angular-bootstrap\ui-bootstrap.min.js" />
+    <Content Include="Content\packages\angular-filter\dist\angular-filter.js" />
+    <Content Include="Content\packages\angular-filter\index.js" />
+    <Content Include="Content\packages\angular-loader\angular-loader.js" />
+    <Content Include="Content\packages\angular-loading-bar\build\loading-bar.css" />
+    <Content Include="Content\packages\angular-loading-bar\build\loading-bar.js" />
+    <Content Include="Content\packages\angular-loading-bar\index.js" />
+    <Content Include="Content\packages\angular-local-storage\dist\angular-local-storage.js" />
+    <Content Include="Content\packages\angular-local-storage\index.js" />
+    <Content Include="Content\packages\angular-messages\angular-messages.js" />
+    <Content Include="Content\packages\angular-messages\index.js" />
+    <Content Include="Content\packages\angular-mocks\angular-mocks.js" />
+    <Content Include="Content\packages\angular-mocks\ngAnimateMock.js" />
+    <Content Include="Content\packages\angular-mocks\ngMock.js" />
+    <Content Include="Content\packages\angular-mocks\ngMockE2E.js" />
+    <Content Include="Content\packages\angular-rangeslider\angular.rangeSlider.css" />
+    <Content Include="Content\packages\angular-rangeslider\angular.rangeSlider.js" />
+    <Content Include="Content\packages\angular-resource\angular-resource.js" />
+    <Content Include="Content\packages\angular-resource\index.js" />
+    <Content Include="Content\packages\angular-route\angular-route.js" />
+    <Content Include="Content\packages\angular-route\index.js" />
+    <Content Include="Content\packages\angular-sanitize\angular-sanitize.js" />
+    <Content Include="Content\packages\angular-sanitize\index.js" />
+    <Content Include="Content\packages\angular-touch\angular-touch.js" />
+    <Content Include="Content\packages\angular-touch\index.js" />
+    <Content Include="Content\packages\angular-ui-date\src\date.js" />
+    <Content Include="Content\packages\angular-ui-router-tabs\src\ui-router-tabs.js" />
+    <Content Include="Content\packages\angular-ui-router\release\angular-ui-router.js" />
+    <Content Include="Content\packages\angular-ui-router\release\angular-ui-router.min.js" />
+    <Content Include="Content\packages\angular-ui-router\release\resolveService.js" />
+    <Content Include="Content\packages\angular-ui-router\release\stateEvents.js" />
+    <Content Include="Content\packages\angular-ui-select\dist\select.css" />
+    <Content Include="Content\packages\angular-ui-select\dist\select.js" />
+    <Content Include="Content\packages\angular-ui-select\index.js" />
+    <Content Include="Content\packages\angular\angular-csp.css" />
+    <Content Include="Content\packages\angular\angular.js" />
+    <Content Include="Content\packages\angular\angular.min.js" />
+    <Content Include="Content\packages\angular\index.js" />
+    <Content Include="Content\packages\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="Content\packages\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="Content\packages\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="Content\packages\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="Content\packages\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\packages\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="Content\packages\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="Content\packages\bootstrap\dist\js\npm.js" />
+    <Content Include="Content\packages\jquery-ui\jquery-ui.js" />
+    <Content Include="Content\packages\jquery-ui\jquery-ui.min.js" />
+    <Content Include="Content\packages\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <Content Include="Content\packages\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Content\packages\jquery-validation-unobtrusive\LICENSE.txt" />
+    <Content Include="Content\packages\jquery-validation\dist\additional-methods.js" />
+    <Content Include="Content\packages\jquery-validation\dist\additional-methods.min.js" />
+    <Content Include="Content\packages\jquery-validation\dist\jquery.validate.js" />
+    <Content Include="Content\packages\jquery-validation\dist\jquery.validate.min.js" />
+    <Content Include="Content\packages\jquery\dist\jquery.js" />
+    <Content Include="Content\packages\jquery\dist\jquery.min.js" />
+    <Content Include="Content\packages\jquery\LICENSE.txt" />
+    <Content Include="Content\packages\moment\min\locales.min.js" />
+    <Content Include="Content\packages\moment\min\moment-with-locales.min.js" />
+    <Content Include="Content\packages\moment\min\moment.min.js" />
+    <Content Include="Content\packages\moment\moment.js" />
+    <Content Include="Content\packages\toaster\index.js" />
+    <Content Include="Content\packages\toaster\toaster.css" />
+    <Content Include="Content\packages\toaster\toaster.js" />
+    <Content Include="Content\packages\toaster\toaster.min.css" />
+    <Content Include="Content\packages\toaster\toaster.min.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\packages\angular-animate\.bower.json" />
+    <Content Include="Content\packages\angular-animate\LICENSE.md" />
+    <Content Include="Content\packages\angular-filter\.bower.json" />
+    <Content Include="Content\packages\angular-filter\license.md" />
+    <Content Include="Content\packages\angular-loader\.bower.json" />
+    <Content Include="Content\packages\angular-loader\LICENSE.md" />
+    <Content Include="Content\packages\angular-loading-bar\.bower.json" />
+    <Content Include="Content\packages\angular-loading-bar\LICENSE" />
+    <Content Include="Content\packages\angular-mocks\.bower.json" />
+    <Content Include="Content\packages\angular-mocks\LICENSE.md" />
+    <Content Include="Content\packages\angular-resource\.bower.json" />
+    <Content Include="Content\packages\angular-resource\LICENSE.md" />
+    <Content Include="Content\packages\angular-route\.bower.json" />
+    <Content Include="Content\packages\angular-route\LICENSE.md" />
+    <Content Include="Content\packages\angular-sanitize\.bower.json" />
+    <Content Include="Content\packages\angular-sanitize\LICENSE.md" />
+    <Content Include="Content\packages\angular-touch\.bower.json" />
+    <Content Include="Content\packages\angular-touch\LICENSE.md" />
+    <Content Include="Content\packages\angular-ui-date\.bower.json" />
+    <Content Include="Content\packages\angular-ui-date\LICENSE" />
+    <Content Include="Content\packages\angular-ui-select\.bower.json" />
+    <Content Include="Content\packages\angular-ui-select\LICENSE" />
+    <Content Include="Content\packages\angular\.bower.json" />
+    <Content Include="Content\packages\angular\LICENSE.md" />
+    <Content Include="Content\packages\bootstrap\.bower.json" />
+    <Content Include="Content\packages\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\packages\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\packages\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\packages\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\packages\bootstrap\less\.csscomb.json" />
+    <Content Include="Content\packages\bootstrap\less\.csslintrc" />
+    <Content Include="Content\packages\bootstrap\less\alerts.less" />
+    <Content Include="Content\packages\bootstrap\less\badges.less" />
+    <Content Include="Content\packages\bootstrap\less\bootstrap.less" />
+    <Content Include="Content\packages\bootstrap\less\breadcrumbs.less" />
+    <Content Include="Content\packages\bootstrap\less\button-groups.less" />
+    <Content Include="Content\packages\bootstrap\less\buttons.less" />
+    <Content Include="Content\packages\bootstrap\less\carousel.less" />
+    <Content Include="Content\packages\bootstrap\less\close.less" />
+    <Content Include="Content\packages\bootstrap\less\code.less" />
+    <Content Include="Content\packages\bootstrap\less\component-animations.less" />
+    <Content Include="Content\packages\bootstrap\less\dropdowns.less" />
+    <Content Include="Content\packages\bootstrap\less\forms.less" />
+    <Content Include="Content\packages\bootstrap\less\glyphicons.less" />
+    <Content Include="Content\packages\bootstrap\less\grid.less" />
+    <Content Include="Content\packages\bootstrap\less\input-groups.less" />
+    <Content Include="Content\packages\bootstrap\less\jumbotron.less" />
+    <Content Include="Content\packages\bootstrap\less\labels.less" />
+    <Content Include="Content\packages\bootstrap\less\list-group.less" />
+    <Content Include="Content\packages\bootstrap\less\media.less" />
+    <Content Include="Content\packages\bootstrap\less\mixins.less" />
+    <Content Include="Content\packages\bootstrap\less\mixins\alerts.less" />
+    <Content Include="Content\packages\bootstrap\less\mixins\background-variant.less" />
+    <Content Include="Content\packages\bootstrap\less\mixins\border-radius.less" />
+    <Content Include="Content\packages\bootstrap\less\mixins\buttons.less" />
+    <Content Include="Content\packages\bootstrap\less\mixins\center-block.less" />
+    <Content Include="Content\packages\bootstrap\less\mixins\clearfix.less" />
+    <Content Include="Content\packages\bootstrap\less\mixins\forms.less" />
+    <Content Include="Content\packages\bootstrap\less\mixins\gradients.less" />
+    <Content Include="Content\packages\bootstrap\less\mixins\grid-framework.less" />
+    <Content Include="Content\packages\bootstrap\less\mixins\grid.less" />
+    <Content Include="Content\packages\bootstrap\less\mixins\hide-text.less" />
+    <Content Include="Content\packages\bootstrap\less\mixins\image.less" />
+    <Content Include="Content\packages\bootstrap\less\mixins\labels.less" />
+    <Content Include="Content\packages\bootstrap\less\mixins\list-group.less" />
+    <Content Include="Content\packages\bootstrap\less\mixins\nav-divider.less" />
+    <Content Include="Content\packages\bootstrap\less\mixins\nav-vertical-align.less" />
+    <Content Include="Content\packages\bootstrap\less\mixins\opacity.less" />
+    <Content Include="Content\packages\bootstrap\less\mixins\pagination.less" />
+    <Content Include="Content\packages\bootstrap\less\mixins\panels.less" />
+    <Content Include="Content\packages\bootstrap\less\mixins\progress-bar.less" />
+    <Content Include="Content\packages\bootstrap\less\mixins\reset-filter.less" />
+    <Content Include="Content\packages\bootstrap\less\mixins\reset-text.less" />
+    <Content Include="Content\packages\bootstrap\less\mixins\resize.less" />
+    <Content Include="Content\packages\bootstrap\less\mixins\responsive-visibility.less" />
+    <Content Include="Content\packages\bootstrap\less\mixins\size.less" />
+    <Content Include="Content\packages\bootstrap\less\mixins\tab-focus.less" />
+    <Content Include="Content\packages\bootstrap\less\mixins\table-row.less" />
+    <Content Include="Content\packages\bootstrap\less\mixins\text-emphasis.less" />
+    <Content Include="Content\packages\bootstrap\less\mixins\text-overflow.less" />
+    <Content Include="Content\packages\bootstrap\less\mixins\vendor-prefixes.less" />
+    <Content Include="Content\packages\bootstrap\less\modals.less" />
+    <Content Include="Content\packages\bootstrap\less\navbar.less" />
+    <Content Include="Content\packages\bootstrap\less\navs.less" />
+    <Content Include="Content\packages\bootstrap\less\normalize.less" />
+    <Content Include="Content\packages\bootstrap\less\pager.less" />
+    <Content Include="Content\packages\bootstrap\less\pagination.less" />
+    <Content Include="Content\packages\bootstrap\less\panels.less" />
+    <Content Include="Content\packages\bootstrap\less\popovers.less" />
+    <Content Include="Content\packages\bootstrap\less\print.less" />
+    <Content Include="Content\packages\bootstrap\less\progress-bars.less" />
+    <Content Include="Content\packages\bootstrap\less\responsive-embed.less" />
+    <Content Include="Content\packages\bootstrap\less\responsive-utilities.less" />
+    <Content Include="Content\packages\bootstrap\less\scaffolding.less" />
+    <Content Include="Content\packages\bootstrap\less\tables.less" />
+    <Content Include="Content\packages\bootstrap\less\theme.less" />
+    <Content Include="Content\packages\bootstrap\less\thumbnails.less" />
+    <Content Include="Content\packages\bootstrap\less\tooltip.less" />
+    <Content Include="Content\packages\bootstrap\less\type.less" />
+    <Content Include="Content\packages\bootstrap\less\utilities.less" />
+    <Content Include="Content\packages\bootstrap\less\variables.less" />
+    <Content Include="Content\packages\bootstrap\less\wells.less" />
+    <Content Include="Content\packages\bootstrap\LICENSE" />
+    <Content Include="Content\packages\jquery-validation-unobtrusive\.bower.json" />
+    <Content Include="Content\packages\jquery-validation\.bower.json" />
+    <Content Include="Content\packages\jquery-validation\LICENSE.md" />
+    <Content Include="Content\packages\jquery\.bower.json" />
+    <Content Include="Content\packages\moment\.bower.json" />
+    <Content Include="Content\packages\moment\LICENSE" />
+    <Content Include="Content\packages\toaster\.bower.json" />
+    <Content Include="Content\packages\toaster\LICENSE" />
+    <Content Include="Content\packages\toaster\toaster.scss" />
+    <Content Include="Content\packages\angular-bootstrap\.bower.json" />
+    <Content Include="Content\packages\jquery-ui\.bower.json" />
+    <Content Include="Content\packages\angular-local-storage\.bower.json" />
+    <Content Include="Content\packages\angular-local-storage\LICENSE" />
+    <Content Include="Content\packages\angular-messages\.bower.json" />
+    <Content Include="Content\packages\angular-messages\LICENSE.md" />
+    <Content Include="Content\packages\angular-ui-router-tabs\.bower.json" />
+    <Content Include="Content\packages\angular-ui-router-tabs\LICENSE" />
+    <Content Include="Content\packages\angular-ui-router\.bower.json" />
+    <Content Include="Content\packages\angular-ui-router\LICENSE" />
+    <Content Include="Content\css\site.less" />
+    <Content Include="Content\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Error\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\resources\data\profile\profile.data.json" />
+    <Content Include="app\resources\data\retail\dell-streak-7.json" />
+    <Content Include="app\resources\data\retail\dell-venue.json" />
+    <Content Include="app\resources\data\retail\droid-2-global-by-motorola.json" />
+    <Content Include="app\resources\data\retail\droid-pro-by-motorola.json" />
+    <Content Include="app\resources\data\retail\lg-axis.json" />
+    <Content Include="app\resources\data\retail\motorola-atrix-4g.json" />
+    <Content Include="app\resources\data\retail\motorola-bravo-with-motoblur.json" />
+    <Content Include="app\resources\data\retail\motorola-charm-with-motoblur.json" />
+    <Content Include="app\resources\data\retail\motorola-defy-with-motoblur.json" />
+    <Content Include="app\resources\data\retail\motorola-xoom-with-wi-fi.json" />
+    <Content Include="app\resources\data\retail\motorola-xoom.json" />
+    <Content Include="app\resources\data\retail\nexus-s.json" />
+    <Content Include="app\resources\data\retail\phones.json" />
+    <Content Include="app\resources\data\retail\samsung-galaxy-tab.json" />
+    <Content Include="app\resources\data\retail\samsung-gem.json" />
+    <Content Include="app\resources\data\retail\samsung-mesmerize-a-galaxy-s-phone.json" />
+    <Content Include="app\resources\data\retail\samsung-showcase-a-galaxy-s-phone.json" />
+    <Content Include="app\resources\data\retail\samsung-transform.json" />
+    <Content Include="app\resources\data\retail\sanyo-zio.json" />
+    <Content Include="app\resources\data\retail\t-mobile-g2.json" />
+    <Content Include="app\resources\data\retail\t-mobile-mytouch-4g.json" />
+    <Content Include="Content\packages\angular-rangeslider\.bower.json" />
+    <Content Include="Content\packages\angular-rangeslider\LICENSE" />
+    <None Include="Properties\PublishProfiles\shreevenkat.co.uk - Web Deploy.pubxml" />
+    <None Include="Web.Live.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Live|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;RELEASE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54198</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/Web.App</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

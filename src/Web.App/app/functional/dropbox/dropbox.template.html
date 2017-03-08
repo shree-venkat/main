@@ -1,0 +1,54 @@
+﻿<section>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <page-size-options /> &nbsp;
+            <button class="btn btn-success btn-md" ng-click="vm.uploadFile()" style="margin: 3px 0">Upload file &nbsp;<span class="glyphicon glyphicon-plus-sign"></span></button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <form class="form-inline pull-right" ng-submit="vm.search(vm.searchTerm)" role="form">
+                <div class="input-group">
+                    <input type="text" class="form-control" ng-model="vm.searchTerm" placeholder="Search all files ..." id="file-search-input" />
+                    <div ng-click="vm.search('')" ng-if="vm.searchTerm !== ''" class="input-group-addon" style="cursor: pointer"><span class="glyphicon glyphicon-remove"></span></div>
+                    <div ng-click="vm.search(vm.searchTerm)" class="input-group-addon" style="cursor: pointer; color: #fff; background-color: #337ab7; border-color: #337ab7">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div> &nbsp;
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th class="text-right hidden-xs" style="width: 150px">Size</th>
+                    <th class="text-center" style="width: 100px">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="animate-repeat" ng-repeat="file in vm.files | orderBy: FileName as filtered">
+                    <!-- | filter:{ FileName: vm.searchTerm }-->
+                    <td><a ng-href="{{vm.getDownloadFileLink(file)}}" style="text-decoration: underline; color: #56b4d9">{{file.FileName}}</a></td>
+                    <td class="text-right hidden-xs">
+                        {{file.FileSize | formattedSize}}
+                    </td>
+                    <td class="text-center">
+                        <a type="button" class="btn btn-xs btn-danger glyphicon glyphicon-trash" ng-click="vm.deleteFile(file)" style="padding-bottom: 2px"></a>
+                    </td>
+                </tr>
+                <tr class="animate-repeat" ng-if="filtered.length === 0"><td colspan="3">No files found.</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row" ng-if="vm.files.length > 0">
+        <div class="col-sm-6 pull-right">
+            <div class="pull-right text-center-sm">
+                <uib-pagination total-items="vm.total" items-per-page="vm.pageSize" max-size="6" ng-model="vm.page" class="pagination-sm" boundary-links="true" rotate="true" num-pages="vm.totalPages" ng-change="vm.pageChanged(vm.page)"></uib-pagination>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <br />
+            <current-page class="text-center-sm"></current-page>
+        </div>
+    </div>
+</section>

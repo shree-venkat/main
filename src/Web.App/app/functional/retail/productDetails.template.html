@@ -1,0 +1,178 @@
+﻿<section>
+    <div>
+        <button class="btn btn-default" ng-click="vm.backToSearch()"><span class="glyphicon glyphicon-hand-left"></span> Back to Search</button>
+    </div>
+    <div class="text-center">
+        <div class="name">{{vm.product.name}}</div>
+        <div class="animate-switch-container" ng-switch on="vm.mainImage">
+            <div class="animate-switch animate-switch-round" ng-switch-default>
+                <img ng-src="{{vm.mainImage}}" alt="{{vm.product.name}}" class="img-rounded img-responsive" height="350" width="350" style="margin: auto" />
+            </div>
+            <div ng-repeat="img in vm.product.images">
+                <div class="animate-switch img-switch-round" ng-switch-when="{{img}}">
+                    <img ng-src="{{img}}" alt="{{vm.product.name}}" class="img-rounded img-responsive" height="350" width="350" style="margin: auto" />
+                </div>
+            </div>
+        </div>
+        <div class="hidden-xs">
+            <img ng-repeat="img in vm.product.images" ng-src="{{img}}" ng-mouseover="vm.mainImage = img" alt="{{vm.product.name}}" class="img-thumbnail img-responsive img-collection" height="100" width="100" />
+        </div>
+        <div class="visible-xs">
+            <img ng-repeat="img in vm.product.images" ng-src="{{img}}" ng-mouseover="vm.mainImage = img" alt="{{vm.product.name}}" class="img-thumbnail img-responsive img-collection" height="60" width="60" />
+        </div>
+        <div style="padding: 20px 0" ng-bind="vm.product.description"></div>
+    </div>
+    <div class="clearfix"></div>
+    <hr />
+    <div style="padding: 10px 0">
+
+        <!-- Source code from THIS POINT FORWARD to EOF (phone spec) is reused from PhoneCatApp. Thanks again :) -->
+        <ul class="specs">
+            <li>
+                <span>Availability and Networks</span>
+                <dl>
+                    <dt>Availability</dt>
+                    <dd ng-repeat="availability in vm.product.availability">{{availability}}</dd>
+                </dl>
+            </li>
+            <li>
+                <span>Battery</span>
+                <dl>
+                    <dt>Type</dt>
+                    <dd>{{vm.product.battery.type}}</dd>
+                    <dt>Talk Time</dt>
+                    <dd>{{vm.product.battery.talkTime}}</dd>
+                    <dt>Standby time (max)</dt>
+                    <dd>{{vm.product.battery.standbyTime}}</dd>
+                </dl>
+            </li>
+            <li>
+                <span>Storage and Memory</span>
+                <dl>
+                    <dt>RAM</dt>
+                    <dd>{{vm.product.storage.ram}}</dd>
+                    <dt>Internal Storage</dt>
+                    <dd>{{vm.product.storage.flash}}</dd>
+                </dl>
+            </li>
+            <li>
+                <span>Connectivity</span>
+                <dl>
+                    <dt>Network Support</dt>
+                    <dd>{{vm.product.connectivity.cell}}</dd>
+                    <dt>WiFi</dt>
+                    <dd>{{vm.product.connectivity.wifi}}</dd>
+                    <dt>Bluetooth</dt>
+                    <dd>{{vm.product.connectivity.bluetooth}}</dd>
+                    <dt>Infrared</dt>
+                    <dd>{{vm.product.connectivity.infrared | checkmark}}</dd>
+                    <dt>GPS</dt>
+                    <dd>{{vm.product.connectivity.gps | checkmark}}</dd>
+                </dl>
+            </li>
+            <li>
+                <span>Android</span>
+                <dl>
+                    <dt>OS Version</dt>
+                    <dd>{{vm.product.android.os}}</dd>
+                    <dt>UI</dt>
+                    <dd>{{vm.product.android.ui}}</dd>
+                </dl>
+            </li>
+            <li>
+                <span>Size and Weight</span>
+                <dl>
+                    <dt>Dimensions</dt>
+                    <dd ng-repeat="dim in vm.product.sizeAndWeight.dimensions">{{dim}}</dd>
+                    <dt>Weight</dt>
+                    <dd>{{vm.product.sizeAndWeight.weight}}</dd>
+                </dl>
+            </li>
+            <li>
+                <span>Display</span>
+                <dl>
+                    <dt>Screen size</dt>
+                    <dd>{{vm.product.display.screenSize}}</dd>
+                    <dt>Screen resolution</dt>
+                    <dd>{{vm.product.display.screenResolution}}</dd>
+                    <dt>Touch screen</dt>
+                    <dd>{{vm.product.display.touchScreen | checkmark}}</dd>
+                </dl>
+            </li>
+            <li>
+                <span>Hardware</span>
+                <dl>
+                    <dt>CPU</dt>
+                    <dd>{{vm.product.hardware.cpu}}</dd>
+                    <dt>USB</dt>
+                    <dd>{{vm.product.hardware.usb}}</dd>
+                    <dt>Audio / headphone jack</dt>
+                    <dd>{{vm.product.hardware.audioJack}}</dd>
+                    <dt>FM Radio</dt>
+                    <dd>{{vm.product.hardware.fmRadio | checkmark}}</dd>
+                    <dt>Accelerometer</dt>
+                    <dd>{{vm.product.hardware.accelerometer | checkmark}}</dd>
+                </dl>
+            </li>
+            <li>
+                <span>Camera</span>
+                <dl>
+                    <dt>Primary</dt>
+                    <dd>{{vm.product.camera.primary}}</dd>
+                    <dt>Features</dt>
+                    <dd>{{vm.product.camera.features.join(', ')}}</dd>
+                </dl>
+            </li>
+            <li>
+                <span>Additional Features</span>
+                <dd>{{vm.product.additionalFeatures}}</dd>
+            </li>
+        </ul>
+    </div>
+</section>
+<style type="text/css">
+.specs {
+  clear: both;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.specs dt {
+  font-weight: bold;
+}
+
+.specs > li {
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+}
+
+.specs > li > span {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+</style>
+
+<div class="how-its-made-container hidden-xs"><!-- onmouseover="$('.how-its-made').show()" onmouseout="$('.how-its-made').hide()"-->
+    <div class="how-its-made-symbol">
+        <span class="glyphicon glyphicon-info-sign"></span>
+    </div>
+    <div class="how-its-made">
+        <h1 class="text-center">How its made</h1>
+        <div class="row" style="padding-top: 10px;">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 input-box">
+                <div class="background">Template</div>
+                <textarea />
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 input-box">
+                <div class="background">Less</div>
+                <textarea></textarea>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 input-box">
+                <div class="background">Component</div>
+                <textarea></textarea>
+            </div>
+        </div>
+    </div>
+</div>

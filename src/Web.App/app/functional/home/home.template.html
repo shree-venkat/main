@@ -1,0 +1,110 @@
+﻿<div class="row">
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-info">
+            <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Component-based Angular JS (1.5+) with Web API 2 (via CORS), EF 6 Migrations
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                    <p>
+                        ShreeVenkat.co.uk is an attempt to learn and showcase the behind-the-scenes aspect of new frameworks & features of .NET & web development, both server & client platforms.
+                        Since I've put out the source code of this website on GitHub in 2015, I've created (& deleted) numerous GitHub repositories and accounts - trying to keep only the relevant & newer frameworks of application development.
+                    </p>
+                    <p>
+                        This is currently version 2 of my website that uses Angular JS 1.x (over shell MVC 5) on client-side and Web API 2 via CORS (<a href="http://api.shreevenkat.co.uk/" target="_blank">Api.ShreeVenkat.co.uk</a>), Entity Framework 6 Migrations & SQL Server 2012 on the server-side. 
+                        Blog posts &amp; dropbox-simulated files are stored in the database and a CMS is provided to manage the data. While you can login and browse through data, POST permissions are Admin-Authorised. 
+                        The CMS itself is a generated code from Visual Studio templates with CRUD operations using Entity Framework.
+                    </p>
+                    <p>
+                        <!--I am planning to port this website to version 3 using TypeScript, AngularJS 2 & .NET Core (and thoroughly enjoying the experience of super-lite & ultra-fast frameworks). 
+                        The current version is designed with templates &amp; components, and VS project files are designed after .NET Core project template - making it easier to migrate to the new technologies.-->
+                        I've implemented my own Blog and it is retained at version 1 to demonstrate KnockoutJS usage, and <span style="text-decoration: underline">hence you can see this SPA loading Blog (&amp; CMS) pages</span> as they're hosted under different subdomains. 
+                        I've implemented file storage solution to emulate Dropbox or Google Drive, JS compiler to emulate CodePen or JS Fiddle, and retail shopping portals to demonstrate varied development experience.
+                    </p>
+                    <p>
+                        This website is built/packaged using npm (for build libs / devDependencies) &amp; bower (for browser-side framework libs) package managers, Grunt and (optionally) Gulp JS task runners for JSHint-ing and minifying & bundling static files, CDN usage (for heavy libs) with fall backs, error handling on client-side (Angular) & server-side (MVC), authentication & authorization using ASP.NET Identity & OAuth, Entity Framework 6 Migrations for database change deployments, and much more...
+                    </p>
+                    <p>
+                        A full-on Continuous Delivery is followed as my development process using Git and Jenkins. Take a look at my repositories @ <a href="https://github.com/shree-venkat" target="_blank">https://github.com/shree-venkat</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    About Me
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">
+                    <p>
+                        I'm a Senior .NET contractor living in the UK with 13 years of experience in development, with core expertise in C# .NET technology. My day-to-day professional life involves working closely 
+                        with leads and architects in designing new requirements, incorporating new technologies, processes & implementing best practices that can add value to my client's IT estate. My typical day also involves working 
+                        in large projects and cross-functional teams in a competitive environment, following Agile (Scrum) & TDD as an integral part of development process. 
+                        I'm located in Milton Keynes and always keen to discuss exciting contract opportunities in and around the City, London and Midlands.
+                    </p>
+                    <p>
+                        Take a look at my profile <a ui-sref="profile" ui-sref-opts="{ reload: true }">here</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading" role="tab" id="headingThree">
+                <h4 class="panel-title collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Get In Touch
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="panel-body">
+                    If you wish to contact me, please feel free to get in touch using the below contact form.
+
+                    <form class="form" name="contactForm" ng-submit="vm.sendMessage(contactForm.$valid)">
+                        <div class="row" style="padding: 20px 0">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="padding-left: 0; padding-right: 10px">
+                                <div class="form-group">
+                                    <label class="sr-only" for="name">Name</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+                                        <input type="text" class="form-control" ng-model="vm.name" id="name" placeholder="Your name ..." required>
+                                    </div>
+                                    <span ng-show="contactForm.name.$invalid">Name is required.</span>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="padding-left: 0;padding-right: 10px">
+                                <div class="form-group">
+                                    <label class="sr-only" for="email">Email</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></div>
+                                        <input type="email" class="form-control" ng-model="vm.email" id="email" placeholder="Optional email ...">
+                                    </div>
+                                    <span ng-show="vm.email.$invalid">Email is invalid.</span>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                <div class="form-group">
+                                    <span style="position: relative">
+                                        <span class="glyphicon glyphicon-unchecked animate-fade check-box" ng-if="vm.copyUser !== true && vm.email !== ''" ng-click="vm.copyUser = !vm.copyUser" style="padding-top: 3px; position: absolute"></span>
+                                        <span class="glyphicon glyphicon-check animate-fade check-box" ng-if="vm.copyUser === true && vm.email !== ''" ng-click="vm.copyUser = !vm.copyUser" style="padding-top: 3px; position: absolute"></span>
+                                    </span>
+                                    <label for="copyUser" class="animate-fade" ng-if="vm.email !== ''" style="color: #777; vertical-align: top; padding-top: 7px; font-weight: normal; margin-left: 25px">Copy Me</label>
+                                </div>
+                            </div>
+
+                            <textarea class="form-control" rows="5" ng-model="vm.message" placeholder="Message ..." required style="padding-right: 10px"></textarea>
+                            <span ng-show="contactForm.message.$invalid">Message is required.</span>
+                        </div>
+
+                        <button type="submit" class="btn btn-info">Send Message &nbsp; <span class="glyphicon glyphicon-send"></span></button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

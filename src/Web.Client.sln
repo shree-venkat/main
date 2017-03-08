@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.App", "Web.App\Web.App.csproj", "{2460E5AE-CB42-4FDE-84C0-C422AEB1C442}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web.App.Package", "Web.App.Package", "{269E327B-A1FA-4F1E-A958-7BF770C78454}"
+	ProjectSection(SolutionItems) = preProject
+		Web.App\.bowerrc = Web.App\.bowerrc
+		Web.App\.jshintrc = Web.App\.jshintrc
+		Web.App\bower.json = Web.App\bower.json
+		Web.App\bundleconfig.json = Web.App\bundleconfig.json
+		Web.App\Gruntfile.js = Web.App\Gruntfile.js
+		Web.App\Gulpfile.js = Web.App\Gulpfile.js
+		Web.App\package.json = Web.App\package.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Live|Any CPU = Live|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2460E5AE-CB42-4FDE-84C0-C422AEB1C442}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2460E5AE-CB42-4FDE-84C0-C422AEB1C442}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2460E5AE-CB42-4FDE-84C0-C422AEB1C442}.Live|Any CPU.ActiveCfg = Live|Any CPU
+		{2460E5AE-CB42-4FDE-84C0-C422AEB1C442}.Live|Any CPU.Build.0 = Live|Any CPU
+		{2460E5AE-CB42-4FDE-84C0-C422AEB1C442}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2460E5AE-CB42-4FDE-84C0-C422AEB1C442}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

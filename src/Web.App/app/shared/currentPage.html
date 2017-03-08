@@ -1,0 +1,10 @@
+﻿<p>
+    <span ng-if="vm.total > 0">
+        <span>Showing</span>
+        <span>{{(vm.pageSize * (vm.page - 1)) + 1}}</span>
+        <span>to</span>
+        <span ng-if="vm.page !== vm.totalPages">{{vm.pageSize * vm.page}}</span>
+        <span ng-if="vm.page === vm.totalPages">{{vm.total}}</span>
+        <span>of {{vm.total}} Records</span>
+    </span>
+</p>

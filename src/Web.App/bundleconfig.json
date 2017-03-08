@@ -1,0 +1,82 @@
+[
+  {
+    "outputFileName": "Content/css/site.min.css",
+    "inputFiles": [
+      "Content/css/site.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/js/site.min.js",
+    "inputFiles": [
+      "Content/js/site.js"
+    ]
+  },
+  {
+    "outputFileName": "app/app-bundle.min.js",
+    "inputFiles": [
+      "app/app.module.js",
+      "app/app.config.js",
+      "app/app.routes.js",
+      "app/common/errorhandler/*.module.js",
+      "app/common/errorhandler/*.js",
+      "app/common/logger/*.module.js",
+      "app/common/logger/*.js",
+      "app/common/router/*.module.js",
+      "app/common/router/*.js",
+      "app/functional/administrators/*.module.js",
+      "app/functional/administrators/*.js",
+      "app/functional/dashboard/*.module.js",
+      "app/functional/dashboard/*.js",
+      "app/functional/retail/*.module.js",
+      "app/functional/retail/*.js",
+      "app/functional/dropbox/*.module.js",
+      "app/functional/dropbox/*.js",
+      "app/functional/codepen/*.module.js",
+      "app/functional/codepen/*.js",
+      "app/functional/home/*.module.js",
+      "app/functional/home/*.js",
+      "app/functional/profile/*.module.js",
+      "app/functional/profile/*.js",
+      "app/layout/*.module.js",
+      "app/layout/*.js",
+      "app/resources/*.module.js",
+      "app/resources/*.js",
+      "app/shared/*.module.js",
+      "app/shared/*.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/bundles/third-party-libs.min.css",
+    "inputFiles": [
+      "Content/packages/angular-loading-bar/build/loading-bar.css",
+      "Content/packages/angular-rangeslider/angular.rangeSlider.css",
+      "Content/packages/angular-ui-select/dist/select.css",
+      "Content/packages/toaster/toaster.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/bundles/third-party-libs.min.js",
+    "inputFiles": [
+      "Content/packages/angular-animate/angular-animate.js",
+      "Content/packages/angular-filter/dist/angular-filter.js",
+      "Content/packages/angular-loader/angular-loader.js",
+      "Content/packages/angular-local-storage/dist/angular-local-storage.js",
+      "Content/packages/angular-messages/angular-messages.js",
+      "Content/packages/angular-resource/angular-resource.js",
+      "Content/packages/angular-route/angular-route.js",
+      "Content/packages/angular-sanitize/angular-sanitize.js",
+      "Content/packages/angular-touch/angular-touch.js",
+      "Content/packages/angular-bootstrap/ui-bootstrap.js",
+      "Content/packages/angular-bootstrap/ui-bootstrap-tpls.js",
+      "Content/packages/angular-ui-date/src/date.js",
+      "Content/packages/angular-ui-router/release/angular-ui-router.js",
+      "Content/packages/angular-ui-router/release/resolveService.js",
+      "Content/packages/angular-ui-router/release/stateEvents.js",
+      "Content/packages/angular-ui-router-tabs/src/ui-router-tabs.js",
+      "Content/packages/angular-ui-select/dist/select.js",
+      "Content/packages/angular-loading-bar/build/loading-bar.js",
+      "Content/packages/angular-rangeslider/angular.rangeSlider.js",
+      "Content/packages/toaster/toaster.js"
+    ]
+  }
+]

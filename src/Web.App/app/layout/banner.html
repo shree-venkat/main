@@ -1,0 +1,6 @@
+﻿<section ng-if="!bannerTitle" ng-include src="bannerContentSrc"></section>
+<section ng-if="bannerTitle">
+    <h1 ng-bind="bannerTitle"></h1>
+    <h4 ng-bind="bannerSubtitle"></h4>
+    <span ng-bind-html="customBannerHtml"></span>
+</section>

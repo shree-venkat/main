@@ -1,0 +1,388 @@
+﻿{
+  "proficiency": [
+    {
+      "skill": "AngularJS 1.x",
+      "rating": 7.5,
+      "years": 2,
+      "lastUsed": 2017,
+      "category": "Client-side",
+      "categoryId": 1
+    },
+    {
+      "skill": "jQuery",
+      "rating": 7.5,
+      "years": 6,
+      "lastUsed": 2016,
+      "category": "Client-side",
+      "categoryId": 1
+    },
+    {
+      "skill": "Bootstrap",
+      "rating": 7,
+      "years": 2,
+      "lastUsed": 2017,
+      "category": "Client-side",
+      "categoryId": 1
+    },
+    {
+      "skill": "HTML5, CSS3, LESS, SASS",
+      "rating": 7,
+      "years": 3,
+      "lastUsed": 2017,
+      "category": "Client-side",
+      "categoryId": 1
+    },
+    {
+      "skill": "npm, bower, Grunt, Gulp, JSHint",
+      "rating": 7,
+      "years": 2,
+      "lastUsed": 2017,
+      "category": "Client-side (packing libs)",
+      "categoryId": 1
+    },
+    {
+      "skill": "KnockoutJS",
+      "rating": 6,
+      "years": 1,
+      "lastUsed": 2016,
+      "category": "Client-side",
+      "categoryId": 1
+    },
+    {
+      "skill": "C#.NET (Up to v4.6)",
+      "rating": 8.5,
+      "years": 10,
+      "lastUsed": 2017,
+      "category": "Server-side",
+      "categoryId": 2
+    },
+    {
+      "skill": "ASP.NET MVC (Up to v4.6)",
+      "rating": 8.5,
+      "years": 6,
+      "lastUsed": 2017,
+      "category": "Server-side",
+      "categoryId": 2
+    },
+    {
+      "skill": "ASP.NET Web API",
+      "rating": 8,
+      "years": 4,
+      "lastUsed": 2017,
+      "category": "Server-side",
+      "categoryId": 2
+    },
+    {
+      "skill": "WCF Services",
+      "rating": 7,
+      "years": 5,
+      "lastUsed": 2016,
+      "category": "Server-side",
+      "categoryId": 2
+    },
+    {
+      "skill": "Windows Services",
+      "rating": 7,
+      "years": 4,
+      "lastUsed": 2016,
+      "category": "Server-side",
+      "categoryId": 2
+    },
+    {
+      "skill": "SOLID Principles",
+      "rating": 7.5,
+      "years": 4,
+      "lastUsed": 2017,
+      "category": "Design & Architecture",
+      "categoryId": 3
+    },
+    {
+      "skill": "OOAD, Design Patterns",
+      "rating": 8.5,
+      "years": 12,
+      "lastUsed": 2017,
+      "category": "Design & Architecture",
+      "categoryId": 3
+    },
+    {
+      "skill": "Layered/n-Tier/multi-tier Architectures",
+      "rating": 7.5,
+      "years": 6,
+      "lastUsed": 2017,
+      "category": "Design & Architecture",
+      "categoryId": 3
+    },
+    {
+      "skill": "MVVM & MVW",
+      "rating": 7.5,
+      "years": 2,
+      "lastUsed": 2017,
+      "category": "Design & Architecture",
+      "categoryId": 3
+    },
+    {
+      "skill": "Inversion of Control (IoC) & Dependency Injection (DI)",
+      "rating": 8,
+      "years": 6,
+      "lastUsed": 2017,
+      "category": "Design & Architecture",
+      "categoryId": 3
+    },
+    {
+      "skill": "Entity Framework",
+      "rating": 7.5,
+      "years": 6,
+      "lastUsed": 2017,
+      "category": "Data Access",
+      "categoryId": 4
+    },
+    {
+      "skill": "SQL",
+      "rating": 8,
+      "years": 8,
+      "lastUsed": 2017,
+      "category": "Data Access",
+      "categoryId": 4
+    },
+    {
+      "skill": "SSIS",
+      "rating": 7,
+      "years": 4,
+      "lastUsed": 2016,
+      "category": "Data Access",
+      "categoryId": 4
+    },
+    {
+      "skill": "SSRS",
+      "rating": 7,
+      "years": 3,
+      "lastUsed": 2015,
+      "category": "Data Access",
+      "categoryId": 4
+    },
+    {
+      "skill": "NHibernate",
+      "rating": 6,
+      "years": 2,
+      "lastUsed": 2015,
+      "category": "Data Access",
+      "categoryId": 4
+    },
+    {
+      "skill": "Oracle 11g",
+      "rating": 6,
+      "years": 2,
+      "lastUsed": 2015,
+      "category": "Data Access",
+      "categoryId": 4
+    },
+    {
+      "skill": "Dapper",
+      "rating": 7,
+      "years": 2,
+      "lastUsed": 2016,
+      "category": "Data Access",
+      "categoryId": 4
+    },
+    {
+      "skill": "TDD",
+      "rating": 7.5,
+      "years": 6,
+      "lastUsed": 2017,
+      "category": "Testing Framework",
+      "categoryId": 5
+    },
+    {
+      "skill": "nUnit & MS Test",
+      "rating": 7.5,
+      "years": 6,
+      "lastUsed": 2017,
+      "category": "Testing Framework",
+      "categoryId": 5
+    },
+    {
+      "skill": "Moq, Rhino Mocks",
+      "rating": 7,
+      "years": 4,
+      "lastUsed": 2017,
+      "category": "Testing Framework",
+      "categoryId": 5
+    },
+    {
+      "skill": "Jasmine",
+      "rating": 6.5,
+      "years": 2,
+      "lastUsed": 2017,
+      "category": "Testing Framework",
+      "categoryId": 5
+    },
+    {
+      "skill": "Protractor",
+      "rating": 6,
+      "years": 1,
+      "lastUsed": 2016,
+      "category": "Testing Framework",
+      "categoryId": 5
+    },
+    {
+      "skill": "Visual Studio (Up to 2015) + extensions",
+      "rating": 8.5,
+      "years": 10,
+      "lastUsed": 2017,
+      "category": "Others",
+      "categoryId": 6
+    },
+    {
+      "skill": "TFS",
+      "rating": "8.5",
+      "years": 8,
+      "lastUsed": 2017,
+      "category": "Others",
+      "categoryId": 6
+    },
+    {
+      "skill": "Git",
+      "rating": 7.5,
+      "years": 2,
+      "lastUsed": 2017,
+      "category": "Others",
+      "categoryId": 6
+    },
+    {
+      "skill": "Jenkins",
+      "rating": 7,
+      "years": 1,
+      "lastUsed": 2016,
+      "category": "Others",
+      "categoryId": 6
+    },
+    {
+      "skill": "IIS",
+      "rating": 8,
+      "years": 6,
+      "lastUsed": 2017,
+      "category": "Others",
+      "categoryId": 6
+    }
+  ],
+  "experience": [
+    {
+      "client": "Willmott Dixon",
+      "url": "http://www.willmottdixon.co.uk/",
+      "logo": "http://www.willmottdixon.co.uk/img/logo.png",
+      "logoBgColor": "",
+      "sector": "Construction",
+      "startDate": "2016-10-01",
+      "endDate": "2017-03-01",
+      "detailedSkill": true,
+      "Build": "npm for dev dependencies, bower for client-side libs, Grunt task runner for linting (JSHint) & bundling, NuGet packages for server-side libraries.",
+      "details": {
+        "Client-side": "AngularJS 1.5.7 SPA with ngAnimate, UI Router, UI Bootstrap libraries, Bootstrap 3.0, LESS & HTML5 on the frontend with MVVM architecture.",
+        "Server-side": "ASP.NET 4.6 framework, MVC 5, WebAPI 2, Unity DI with n-Tier architecture on the backend.",
+        "Data Layer": "Entity Framework 6 with Code-First migrations & MS SQL Server 2012.",
+        "Test": "MS Test for automated unit tests.",
+        "Release": "CD using TFS 2015 with Release management.",
+        "Process": "Agile (Scrum) development having 2-week sprints, sprint planning & retrospective, achieving burndown goals."
+      },
+      "Highlights": [
+        "Introduced static content bundling & delivery, application versioning, IIS best practices, commissioned TFS 2015 with Release management.",
+        "Mentoring juniors, assisting team members, knowledge sharing, team building."
+      ]
+    },
+    {
+      "client": "Next Plc",
+      "url": "http://www.next.co.uk/",
+      "logo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAcCAIAAAAY8Y2vAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDE0IDc5LjE1Njc5NywgMjAxNC8wOC8yMC0wOTo1MzowMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6ODI1RTI3N0U5OTdGMTFFNEFEMTI5ODZCMzY1NTIxMUUiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ODI1RTI3N0Q5OTdGMTFFNEFEMTI5ODZCMzY1NTIxMUUiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1RDAyNUI4MzBGNUYxMUU0ODlCRTkyNTkyN0NBNzI2MSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1RDAyNUI4NDBGNUYxMUU0ODlCRTkyNTkyN0NBNzI2MSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pi6oiUUAAAe6SURBVHja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",
+      "logoBgColor": "#111",
+      "sector": "Retail",
+      "startDate": "2015-10-01",
+      "endDate": "2016-08-01",
+      "detailedSkill": true,
+      "details": {
+        "Client-side": "KnockoutJS 3.1, Bootstrap 3.0, Flexbox layouts, SASS, HTML5, jQuery with AJAX on the frontend with MVVM architecture.",
+        "Server-side": "ASP.NET 4.5.1 framework, MVC 5, WebAPI 2, SignalR, Ninject DI, WCF service, Windows service for scheduled tasks, Message Queues on nServiceBus.",
+        "Data Layer": "Entity Framework 6 with Repository pattern (DAL), MS SQL Server 2012, SSIS for ETL jobs, SSRS reports.",
+        "Test": "MS Test for automated unit tests, VS SQL unit tests for Stored Procedures.",
+        "Build": "JSHint, Mads Kristensen's Web Essentials VS Extension for bundling, NuGet package manager, CI builds using TFS 2013.",
+        "Release": "CD to Azure deployment platform.",
+        "Process": "Agile (Scrum) development having 3-week sprints, sprint planning & retrospective, achieving burndown goals."
+      },
+      "Highlights": [
+        "Interacting with product owners & business teams, ownership in delivering changes, process improvements.",
+        "Introduced Font Awesome & JSHint UI libraries.",
+        "Assisting team members, mentoring juniors, knowledge sharing."
+      ]
+    },
+    {
+      "client": "Haven Power",
+      "url": "http://www.havenpower.com/",
+      "logo": "http://www.havenpower.com/images/logo.png",
+      "logoBgColor": "",
+      "sector": "Energy/Utilities",
+      "startDate": "2013-09-01",
+      "endDate": "2015-08-01",
+      "techSkills": [
+        "ASP.NET 4.5 framework, MVC 5, WebAPI interfaces, Single Page Application (SPA) with AngularJS 1, Big data design & capability, Fluent nHibernate, Oracle DB 11g, TFS for version control & build process, Continuous Integration, NuGet package manager, jQuery & AJAX, Elastic Search, MS Test for unit tests & continuous integration.",
+        "Oracle DB 11g – database design, SQL scripts, stored procedures, views, SSIS for inter-system ETL (with third-party billing system), Dapper, supporting MVC, WebForms, WinForms & VBA applications, resolving issues around WCF & WebAPI services (including ABCs and versioning)."
+      ],
+      "roles": [
+        "Agile (Scrum) development having 3-week sprints, interacting with product owners, ownership of components",
+        "Responsible for commissioning Continuous Integration using TFS builds, feasibility study on database migration tools to enable automated DB deployments.",
+        "Interacting with various business teams to re-assess issues and requirements, quick & effective resolution, supporting test teams and releases to various environment.",
+        "Multi-tasking & context-switching attributes were essential for this role."
+      ]
+    },
+    {
+      "client": "Hoseasons",
+      "url": "http://www.hoseasons.co.uk/",
+      "logo": "http://www.hoseasons.co.uk/assets/hoseasons-logo-white-300.png",
+      "logoBgColor": "#333",
+      "sector": "Holiday/Tourism",
+      "startDate": "2012-02-01",
+      "endDate": "2013-08-01",
+      "techSkills": [
+        "Traditional ASP.NET framework for web infrastructure, Linq-to-SQL with Repository pattern & caching (DAL), TFS for version control & releases, JSON & XML serialization, SQL Server 2008 R2, Javascript, jQuery & AJAX.",
+        "Traditional ASP.NET framework for bespoke CMS, Entity Framework Model with Repository pattern (DAL), SQL Server 2008 R2, SQL Membership Provider, Javascript, jQuery & AJAX.",
+        "Feasibility study of WCF services, implemented as a Windows service, multi-threading, customized implementation of mutual exclusion to suit memory utilization, forced garbage collection, data structures, reuse of existing underlying platform, SQL Server 2008 R2, TFS for version control & releases, XML/XSLT, Windows file system APIs, compression & encryption techniques."
+      ],
+      "roles": [
+        "Agile (Scrum) with TDD development having 2-week sprints, sprint planning & retrospective. Interacting with product teams, release to QA & UAT, assisting team members.",
+        "Assigned to deliver single-handedly, responsible for requirement collection from business & product teams, implemented the system to exceed performance & resource requirements, releases to user-acceptance test teams and going live (integrating the service with rest of the live infrastructure).",
+        "Developing coding standards & principles review and refactor code."
+      ]
+    },
+    {
+      "client": "BroadbandChoices.co.uk",
+      "url": "https://www.broadbandchoices.co.uk/",
+      "logo": "data:image/png;base64,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",
+      "logoBgColor": "",
+      "sector": "Media/Comparison",
+      "startDate": "2011-06-01",
+      "endDate": "2012-02-01",
+      "techSkills": [ "Web Services over WCF (SOAP), feasibility study of RESTful services, IIS7, White-label system (with Umbraco CMS) running on ASP.NET MVC 3 framework (back-end), Entity Framework Model with Repository pattern (DAL), Autofac for DI, MSpec for TDD, nUnit, Rhino Mocks, Selenium for UI test, ALM with MSBuild & TFS, JSON & XML serialization, SQL Server 2008 R2, SQL Membership Provider, JavaScript, jQuery & AJAX, Classic ASP integration." ],
+      "roles": [
+        "Agile (Scrum) with TDD development, lead member in daily scrum meetings. Responsible for planning & driving the sprint, interfacing with business, release to QA and going live, assisting team members.",
+        "Active member in architecture group and responsible for bringing in new technological ideas, solutions & packages. Introduced Autofac, T4 MVC & MSpec into the system, assisted MSBuild feasibility, review & refactor code."
+      ]
+    },
+    {
+      "client": "CompareTheMarket.com",
+      "url": "https://www.comparethemarket.com/",
+      "logo": "https://cdn.comparethemarket.com/market/assets/responsive2015/images/ctm-logo/ctm-logo-350x43px__6bb004a1b17efc0938a337a9c4098373.svg",
+      "logoBgColor": "#1F2A5B",
+      "sector": "Insurance/Comparison",
+      "startDate": "2011-02-01",
+      "endDate": "2011-05-01",
+      "techSkills": [ "MVC 2, XML & XSL transformations, consuming WCF services, Entity Framework Model, DI using Unity, nUnit, Rhino mocks, SQL Server 2005 (with Stored Procedures), jQuery, CSS." ],
+      "roles": [
+        "Key member of the project, including requirements gathering (from business side), prototyping & demonstration and design & development of the application.",
+        "Defect fixes and a minor feature enhancement, understanding business domain & IT architecture."
+      ]
+    }
+  ],
+  "qualifications": [
+    "Microsoft certified Solutions Developer - Web Application - 2013.",
+    "Bachelors of Engineering (B.E), Computer Science – 2004."
+  ],
+  "loadedExperience": {}
+}

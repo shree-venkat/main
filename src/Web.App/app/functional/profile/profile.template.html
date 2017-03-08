@@ -1,0 +1,121 @@
+﻿<section class="profile">
+    <div>
+        <ul class="nav nav-pills nav-justified">
+            <li role="presentation" ng-repeat="tab in vm.tabs" ng-click="vm.initProfile();vm.activeTab = tab" ng-class="vm.activeTab === tab ? 'active tab-highlight' : ''">
+                <a href="javascript:void(0)" aria-controls="home" role="tab" data-toggle="tab">{{tab}}</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="animate-switch-container" ng-switch on="vm.activeTab">
+                <div class="animate-switch animate-switch-left" ng-switch-default>
+                    <div class="row">
+                        <div class="col-lg-2 col-md-3">
+                            <div ng-repeat="exp in vm.profile.experience" ng-click="vm.profile.loadedClient = exp.client" class="client" ng-class="exp.client === vm.profile.loadedClient ? 'client-highlight' : ''">
+                                <div ng-bind="exp.client" style="font-size: 0.95em"></div>
+                                <span ng-if="exp.client !== vm.profile.loadedClient">
+                                    <span ng-bind="exp.startDate | date: 'MMM yyyy'"></span> ~ <span ng-bind="exp.endDate | date: 'MMM yyyy'"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-lg-10 col-md-9">
+                            <div ng-repeat="exp in vm.profile.experience | filter:{ client: vm.profile.loadedClient }" class="animate-experience">
+                                <!--<div style="display: block; width: 100%; text-align: right; padding-bottom: 10px;">
+                                    <a ng-href="{{exp.url}}" target="_blank">
+                                        <img ng-src="{{exp.logo}}" alt="{{exp.client}}" ng-style="{'background-color': exp.logoBgColor}" />
+                                    </a>
+                                </div>-->
+                                <div style="padding-bottom: 10px"><strong>{{exp.client}}:</strong> <a ng-href="{{exp.url}}" target="_blank"><span class="glyphicon glyphicon-link" style="font-size: 1.2em"></span></a></div>
+                                <div style="padding-bottom: 10px"><strong>Sector:</strong> {{exp.sector}}</div>
+                                <div style="padding-bottom: 10px"><strong>Period:</strong> <span ng-bind="exp.startDate | date: 'MMM yyyy'"></span> ~ <span ng-bind="exp.endDate | date: 'MMM yyyy'"></span></div>
+                                <div ng-if="exp.detailedSkill">
+                                    <div ng-repeat="(key, data) in exp.details" style="padding-bottom: 10px">
+                                        <div><strong>{{key}}:</strong> <span ng-bind="data"></span> </div>
+                                    </div>
+                                    <div style="padding-bottom: 10px"><strong>Highlights</strong></div>
+                                    <div>
+                                        <ul>
+                                            <li ng-repeat="item in exp.Highlights">{{item}}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div ng-if="!exp.detailedSkill">
+                                    <div style="padding-bottom: 10px"><strong>Technical Skills:</strong></div>
+                                    <div>
+                                        <ul>
+                                            <li ng-repeat="skill in exp.techSkills">{{skill}}</li>
+                                        </ul>
+                                    </div>
+                                    <div style="padding-bottom: 10px"><strong>Roles:</strong></div>
+                                    <div>
+                                        <ul>
+                                            <li ng-repeat="role in exp.roles">{{role}}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        <div style="font-size: 0.9em">
+                            * Prior to 2010, I was in permanent employment in Bangalore, India, largely with <a href="http://www.huawei.com/in/about-huawei/corporate-info/research-development/research-development-in-india/">Huawei Technologies</a>. I started my professional programming career in 2004 with a Telecom startup company before working for Huawei Technologies.
+                        </div>
+                        <div style="font-size: 0.9em">
+                            ** I completed my Bachelors of Engineering specializing in Computer Science (1999 to 2004) from <a href="https://en.wikipedia.org/wiki/Visvesvaraya_Technological_University" target="_blank">Visvesvaraya Technological University</a>, India.
+                        </div>
+                    </p>
+                </div>
+                <div class="animate-switch animate-switch-right" ng-switch-when="Proficiency">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-bordered">
+                            <thead>
+                                <tr style="font-weight: bolder">
+                                    <td style="width: 20%">
+                                        Category
+                                        <!--<span class="glyphicon glyphicon-triangle-top" ng-click="vm.orderProps = 'category'" ng-if="vm.orderProps !== 'category'" style="cursor: pointer"></span>
+                                        <span class="glyphicon glyphicon-triangle-bottom" ng-click="vm.orderProps = '-category'" ng-if="vm.orderProps !== '-category'" style="cursor: pointer"></span>-->
+                                    </td>
+                                    <td style="width: 40%" class="form-inline">
+                                        Skill 
+                                        <span class="input-group hidden-xs" style="float: right">
+                                            <input type="text" class="form-control input-sm" ng-model="vm.searchSkill" style="display: inline; font-weight: normal" placeholder="Search a skill ..." />
+                                            <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        Rating 
+                                        <span class="glyphicon glyphicon-triangle-top" ng-click="vm.orderProps = 'rating'" ng-if="vm.orderProps !== 'rating'" style="cursor: pointer"></span>
+                                        <span class="glyphicon glyphicon-triangle-bottom" ng-click="vm.orderProps = '-rating'" ng-if="vm.orderProps !== '-rating'" style="cursor: pointer"></span>
+                                    </td>
+                                    <td>
+                                        Years of Experience
+                                        <span class="glyphicon glyphicon-triangle-top" ng-click="vm.orderProps = 'years'" ng-if="vm.orderProps !== 'years'" style="cursor: pointer"></span>
+                                        <span class="glyphicon glyphicon-triangle-bottom" ng-click="vm.orderProps = '-years'" ng-if="vm.orderProps !== '-years'" style="cursor: pointer"></span>
+                                    </td>
+                                    <td>
+                                        Last Used
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="item in vm.profile.proficiency | filter:{ skill: vm.searchSkill } | orderBy:vm.orderProps" class="animate-repeat">
+                                    <td>{{item.category}}</td>
+                                    <td style="font-weight: bold">{{item.skill}}</td>
+                                    <td>{{item.rating}}</td>
+                                    <td>{{item.years}} yrs</td>
+                                    <td>{{item.lastUsed}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="animate-switch" ng-switch-when="Qualifications">
+                    <div>
+                        <ul>
+                            <li ng-repeat="item in vm.profile.qualifications">{{item}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
