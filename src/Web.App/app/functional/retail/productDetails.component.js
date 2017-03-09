@@ -14,6 +14,8 @@
             $rootScope.showLoadingMessage = "Loading your selection ...";
             retailResource.get({ file: vm.productId }).$promise.then(function (data) {
                 vm.product = data;
+                $rootScope.bannerTitle = vm.product.name;
+                $rootScope.bannerSubtitle = "Find out if " + $rootScope.bannerTitle + " is just what you're looking for!";
                 vm.mainImage = vm.product.images[0];
             }).catch(function (error) {
                 logger.error("Error", "Sorry, an error occurred while retrieving data", error);

@@ -2,8 +2,8 @@
     'use strict';
 
     function productList($rootScope, $state, $stateParams, $sce, retailResource, logger) {
-        $rootScope.bannerTitle = "Retail Shopping";
-        $rootScope.bannerSubtitle = "Managing your retail portfolio - Showcasing how it's made using AngularJS";
+        $rootScope.bannerTitle = "Gadget Catalogue";
+        $rootScope.bannerSubtitle = "A shopping journey for gadgets - Showcasing how it's made using AngularJS";
         $rootScope.customBannerHtml = $sce.trustAsHtml("<h6>* The CONTENT in this demo ('.json' data & images) are from <a href='https://github.com/angular/angular-phonecat' target='_blank'>PhoneCat Tutorial App</a>, so big thanks to them for saving me a marathon effort</h6>");
 
         var vm = this;
